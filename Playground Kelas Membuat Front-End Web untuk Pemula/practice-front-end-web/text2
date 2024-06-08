@@ -1,0 +1,3 @@
+for (const button of buttons) {
+  button.children[0].style.borderRadius = '6px';
+}
