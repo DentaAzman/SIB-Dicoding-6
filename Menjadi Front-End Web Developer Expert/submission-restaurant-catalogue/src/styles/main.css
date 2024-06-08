@@ -1,0 +1,406 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  color: rgb(27, 38, 44);
+  background-color: rgb(187, 225, 250);
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  padding: 16px;
+  background-color: rgb(0, 152, 253);
+  color: white;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 0;
+  text-decoration: none;
+}
+
+.header {
+  min-height: 100px;
+  transition: min-height 0.3s;
+  display: flex;
+  align-items: center;
+  background-color: rgb(50, 130, 184);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.header__inner {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__title {
+  font-weight: 600;
+  font-size: 2.5em;
+  margin: 0.5em 0.25em;
+  display: inline-block;
+}
+
+.header__menu {
+  font-size: 40px;
+  margin: 0.4em 3.6em;
+  display: block;
+  min-width: 44px;
+  min-height: 44px;
+  text-decoration: none;
+  color: rgb(27, 38, 44);
+}
+
+.nav {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  z-index: 10;
+  background-color: #fff;
+  width: 250px;
+  position: absolute;
+
+  -webkit-transform: translate(-300px, 0);
+  transform: translate(-300px, 0);
+
+  transition: transform 0.3s ease;
+}
+
+.nav.open {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.nav__item {
+  box-sizing: border-box;
+  border-bottom: 1px solid #e0e0e0;
+  width: 100%;
+  list-style: none;
+  text-align: left;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.nav a {
+  display: inline-block;
+  padding: 1.4em;
+  text-decoration: none;
+  color: #616161;
+  width: 100%;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 380px;
+  width: 100%;
+  text-align: center;
+  background-image: url('../public/images/heros/hero-image_4.jpg');
+  background-position: bottom;
+  background-color: green;
+}
+
+.hero__inner {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.hero__title {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+.hero__tagline {
+  color: #ffffff;
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.hero__image {
+  width: 100%;
+}
+
+.hero__image img {
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+}
+
+.explore {
+  width: 100%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.explore__label {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.explore__label::after {
+  content: '';
+  margin-top: 16px;
+  display: block;
+  border-bottom: 1px solid #aecbff;
+}
+
+.page-title {
+  margin: 1em auto;
+  text-align: center;
+  font-size: 1.7em;
+}
+
+.resto-list {
+  display: grid;
+  grid-row-gap: 20px;
+
+  margin: 32px auto auto;
+  text-align: left;
+}
+
+.resto-item {
+  margin: 16px 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: rgb(213, 238, 255);
+}
+
+.resto-item__thumbnail {
+  position: relative;
+}
+
+.resto-item__city-container {
+  position: absolute;
+  top: 10%;
+  background-color: rgb(68, 159, 219);
+  border-radius: 0 5px 5px 0;
+}
+
+.resto-item__city {
+  padding: 10px 14px;
+  font-weight: 700;
+}
+
+.resto-item__img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
+.resto-item__name {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.resto-item__name a {
+  display: block;
+  text-decoration: none;
+  color: rgb(27, 38, 44);
+
+  text-align: center;
+  line-height: 45px;
+}
+
+.resto-item__info {
+  padding: 16px;
+}
+
+.resto-item__rating {
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
+.resto-item__description {
+  margin-top: 0;
+  text-align: justify;
+}
+
+/* Resto Detail */
+
+.resto-detail {
+  margin: 1em auto;
+  padding: 2em;
+  width: 100%;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+
+  background-color: rgb(213, 238, 255);
+  border-radius: 10px;
+  box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+.resto-detail__name {
+  text-align: center;
+}
+
+.resto-detail__picture-container {
+  display: flex;
+  justify-content: center;
+}
+
+.resto-detail__picture {
+  width: 100%;
+  max-width: 600px;
+  max-height: 350px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.resto-detail h3 {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.resto-detail__description {
+  text-align: justify;
+}
+
+.resto-detail__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resto-detail__menu__list p {
+  margin-bottom: 0.5em;
+}
+
+.resto-detail__menu__list li {
+  line-height: 1.5em;
+}
+
+.resto-detail__reviews-container ul {
+  display: grid;
+  line-height: 1.3em;
+  list-style-type: none;
+  row-gap: 1em;
+}
+
+.resto-detail__review {
+  background-color: #c8e0ff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.resto-detail__reviewers-name,
+.resto-detail__reviewers-comment,
+.resto-detail__reviewers-date {
+  display: block;
+}
+
+.resto-detail__reviewers-name {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.resto-detail__reviewers-comment {
+  text-align: center;
+}
+
+.resto-detail__reviewers-date {
+  text-align: end;
+
+  color: rgb(107, 107, 107);
+  font-size: smaller;
+}
+
+/* Favorite Button */
+.favorite {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2b75ff;
+
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 50%;
+  border: 0;
+
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.skeleton {
+  user-select: none;
+  background-color: #eeeeee;
+  color: #eeeeee;
+}
+
+.query-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1em;
+}
+
+.query-container p {
+  font-size: larger;
+}
+
+.query {
+  font-size: larger;
+  min-height: 44px;
+}
+
+/* footer */
+footer {
+  background-color: rgb(50, 130, 184);
+  color: rgb(27, 38, 44);
+  padding: 16px;
+  padding-block: 1.5em;
+}
+
+/* .footer__container {
+  padding-block: 1.5em;
+} */
+
+.footer__main {
+  font-size: smaller;
+
+  text-align: center;
+}

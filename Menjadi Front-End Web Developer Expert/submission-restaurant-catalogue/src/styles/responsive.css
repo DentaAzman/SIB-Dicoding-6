@@ -1,0 +1,153 @@
+@media screen and (max-width: 400px) {
+  .header__title {
+    font-size: 2.3em;
+  }
+
+  .nav {
+    width: 220px;
+  }
+
+  .nav__item {
+    line-height: 16px;
+  }
+
+  .nav a {
+    padding: 1.2em;
+  }
+
+  .hero__title {
+    font-size: 28px;
+  }
+
+  .hero__tagline {
+    font-size: 16px;
+  }
+
+  .explore__label {
+    font-size: 28px;
+  }
+
+  .resto-item__description {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .header__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__left-side {
+    margin-left: 2em;
+  }
+
+  .header__title {
+    font-size: 2.7em;
+  }
+
+  .header__right-side {
+    margin-right: 2em;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  .nav {
+    position: static;
+    width: 100%;
+
+    background-color: rgb(50, 130, 184);
+
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  .nav__list {
+    width: 100%;
+    padding: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-wrap: nowrap;
+  }
+
+  .nav__item {
+    box-sizing: border-box;
+    display: inline-block;
+
+    text-align: center;
+
+    text-transform: uppercase;
+    border: none;
+  }
+
+  .nav a {
+    display: inline-block;
+    padding: 1em;
+
+    color: rgb(27, 38, 44);
+  }
+
+  .nav a:hover {
+    text-decoration: underline;
+  }
+
+  .resto-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 24px;
+    grid-row-gap: 16px;
+  }
+
+  .resto-detail {
+    font-size: larger;
+  }
+
+  .resto-detail__rating-description-container {
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+  }
+
+  .resto-detail__menu {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+  }
+
+  .resto-detail__reviews-container ul {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
+  }
+
+  .query {
+    min-height: 0;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .resto-detail__rating-description-container {
+    padding-left: 6em;
+    padding-right: 6em;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .resto-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    max-width: 1200px;
+  }
+
+  .hero {
+    min-width: 1000px;
+  }
+}
