@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form World onInput</title>
+
+  <link rel="stylesheet" href="styles/form-world.css">
+</head>
+<body>
+  <div class="contents">
+    <h2 align="center">Input Event Form</h2>
+
+    <div class="formContent">
+      <form action="" id="formDataDiri" autocomplete="off">
+        <div class="form-element" id="fieldName">
+          <label for="inputNama">Nama Panggilan:</label><br>
+          <input 
+          type="text" 
+          id="inputNama" 
+          name="nama" 
+          placeholder="Nama Panggilan Anda" 
+          maxlength="15"
+          ><br>
+          <label for="" id="notifikasiSisaKarakter">
+            Sisa karakter: <span id="sisaKarakter"></span>
+          </label>
+        </div>
+        
+        <div class="form-element" id="fieldCopy">
+          <label for="inputCopy"><i>Copy</i> tulisan ini:</label><br>
+          <input 
+          type="text"
+          id="inputCopy"
+          name="copy"
+          value="Hello World!"
+          readonly
+          ><br>
+        </div>
+
+        <div class="form-element" id="fieldPaste">
+          <label for="inputPaste"><i>Paste</i> tulisan di sini:</label>
+          <input 
+          type="text"
+          id="inputPaste"
+          name="paste"
+          placeholder="Paste sesuatu di sini"
+          ><br>
+        </div>
+
+        <div class="form-element" id="fieldCaptcha">
+          <label for="inputCaptcha">Tulis <i>captcha</i> berikut.</label>
+          <br>
+          <img src="https://i.ibb.co/yy59QPB/Captcha.png" alt="Captcha">
+          <br>
+          <input 
+          type="text"
+          id="inputCaptcha"
+          name="captcha"
+          placeholder="Tulis captcha di sini"
+          >
+          <br>
+          <p>
+            Tekan Enter pada keyboard jika sudah selesai menulis <i>captcha</i>
+          </p>
+        </div>
+
+        <div align="center" class="form-element">
+          <input 
+          type="submit"
+          id="submitButton"
+          value="Submit Data"
+          disabled
+          >
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/form-world.js"></script>
+</body>
+</html>

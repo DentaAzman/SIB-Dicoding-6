@@ -1,0 +1,3 @@
+document.getElementById('inputPaste').addEventListener('paste', function () {
+  alert('Anda telah mem-paste sebuah teks...');
+});
