@@ -1,3 +1,0 @@
-for (const button of buttons) {
-  console.log(button.children[0]);
-}
