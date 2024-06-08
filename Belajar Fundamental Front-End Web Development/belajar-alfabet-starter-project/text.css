@@ -1,0 +1,11 @@
+@media (max-width: 400px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr 2fr 2fr;
+    grid-template-areas:
+      'header'
+      'content'
+      'sidebar'
+      'footer';
+  }
+}
