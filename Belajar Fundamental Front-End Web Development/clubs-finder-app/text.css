@@ -1,0 +1,26 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 5fr 2fr;
+ 
+  grid-template-areas:
+    'header  header  header  header'
+    'content content content sidebar'
+    'footer  footer  footer  footer';
+}
+ 
+header {
+  grid-area: header;
+}
+ 
+main {
+  grid-area: content;
+}
+ 
+aside {
+  grid-area: sidebar;
+}
+ 
+footer {
+  grid-area: footer;
+}
